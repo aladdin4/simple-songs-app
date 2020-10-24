@@ -35,6 +35,7 @@ const mapStateToProps = (state) => {
   return { songs: state.songs };
 };
 
-export default connect(mapStateToProps, { SelectSong })(SongList);
+//the 2nd arg. of connect is mapDispatchToProps(), it will send the key value as prop name to the connected component, and the value of the key will be the imported function from actions folder
+export default connect(mapStateToProps, { SelectSong: SelectSong })(SongList);
 
 //we call the action creator with what we want saved in the state after it's mutation
